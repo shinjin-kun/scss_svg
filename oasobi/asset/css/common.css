@@ -1,0 +1,246 @@
+.bg_0 {
+  position: absolute;
+  content: "";
+  width: 260px;
+  height: 700px;
+  background-color: #bd5d45;
+  opacity: 0.8;
+  top: 50px;
+  left: 60px;
+  z-index: 5;
+}
+
+.bg_1 {
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 200px;
+  background-color: #bd5d45;
+  opacity: 0.4;
+  top: 600px;
+  left: 160px;
+  z-index: 10;
+}
+
+.bg_2 {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 600px;
+  background-color: #bd5d45;
+  opacity: 0.6;
+  top: 500px;
+  right: 60px;
+  z-index: 15;
+}
+
+.main {
+  position: relative;
+  z-index: 30;
+}
+
+.header {
+  width: calc(100% - 100px);
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(237, 228, 228, 0.6);
+  box-shadow: 1px 5px 5px rgba(51, 32, 32, 0.1);
+  border-bottom: solid 1px #fff;
+}
+
+.menu {
+  width: calc(100% - 190px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu > div {
+  margin: 0 15px;
+  position: relative;
+}
+.menu > div::before {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: -14px;
+  width: 1px;
+  height: 16px;
+  background-color: #332020;
+}
+.menu > div:first-child::before {
+  content: none;
+}
+
+.logo_wrap {
+  width: 140px;
+  height: auto;
+}
+.logo_wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.topimg {
+  content: "";
+  padding-top: 60px;
+  font-size: 140px;
+  text-align: center;
+  color: rgba(51, 32, 32, 0.1);
+  background-image: url(../img/city.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 50%;
+  position: relative;
+  text-shadow: 1px 5px 10px rgba(51, 32, 32, 0.3);
+}
+
+.top_message {
+  line-height: 1.8;
+  width: 540px;
+  margin: 40px auto 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #ede4e4;
+}
+
+.top_message > p:not(:last-child) {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.sub_title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.menu_list_wrap {
+  width: 840;
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu_list {
+  width: 200px;
+}
+.menu_list [class$=_text] {
+  background: rgba(237, 228, 228, 0.8);
+  padding: 15px 20px;
+}
+
+.menu_img {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 100px;
+}
+.menu_img img {
+  height: auto;
+  width: 200px;
+  position: relative;
+  z-index: 5;
+}
+
+.menu_list.menu1:hover .menu1_img {
+  filter: blur(4px);
+}
+.menu_list.menu1:hover .menu1_hover_img {
+  position: absolute;
+  z-index: 15;
+  top: 10px;
+  bottom: auto;
+  left: 0;
+  height: 80px;
+  animation: slidein 3s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu_list.menu2:hover .menu2_img {
+  filter: blur(4px);
+}
+.menu_list.menu2:hover .menu2_hover_img {
+  position: absolute;
+  z-index: 15;
+  top: 10px;
+  bottom: auto;
+  left: 0;
+  height: 80px;
+  animation: slidein 3s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu_list.menu3:hover .menu3_img {
+  filter: blur(4px);
+}
+.menu_list.menu3:hover .menu3_hover_img {
+  position: absolute;
+  z-index: 15;
+  top: 10px;
+  bottom: auto;
+  left: 0;
+  height: 80px;
+  animation: slidein 3s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.menu_list.menu4:hover .menu4_img {
+  filter: blur(4px);
+}
+.menu_list.menu4:hover .menu4_hover_img {
+  position: absolute;
+  z-index: 15;
+  top: 10px;
+  bottom: auto;
+  left: 0;
+  height: 80px;
+  animation: slidein 3s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.item_list {
+  width: 840;
+  min-height: 200px;
+  margin: 60px auto;
+  background: #ede4e4;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+.item_list .item {
+  width: 32%;
+  background: #fff;
+}
+
+.item_list .item.animate {
+  position: relative;
+  animation: slidein 3s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=common.css.map */
