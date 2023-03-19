@@ -1,0 +1,148 @@
+.topimg__name {
+    font-family: Meiryo, sans-serif;
+    font-size: 15vw;
+    font-weight: bold;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.1);
+    background-image: url(../img/road.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 100%;
+    animation: text_background 15s infinite;
+    position: relative;
+    margin-top: calc(29.666vh - 10vw);
+}
+
+[data-topmsg]::before {
+    content: attr(data-topmsg) " ";
+    position: absolute;
+    top: 12.333vw;
+    left: 0;
+    background-image: url(../img/road.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 100%;
+    animation: text_background 15s infinite;
+    opacity: .2;
+    transform: rotateX(180deg);
+}
+
+@keyframes text_background {
+    0%{background-image: url(../img/road.jpg);}
+    30%{background-image: url(../img/wild-flowers.jpg);}
+    60%{background-image: url(../img/lake.jpg);}
+    100%{background-image: url(../img/road.jpg);}
+}
+
+.comment {
+    position: absolute;
+    top: 35vh;
+    right: 4%;
+    padding: 16.18px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.comment__text {
+    font-size: 1.6vw;
+    line-height: 1.4;
+    position: relative;
+}
+
+.comment__text::before,.comment__text::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    border-top: solid 2px #333;
+    border-bottom: solid 2px #333;
+    transform: rotate(-40deg);
+}
+.comment__text::before {
+    top: -20px;
+    left: -30px;
+}
+.comment__text::after {
+    bottom: -20px;
+    right: -30px;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+.columns > div {
+    margin: 0 10px 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+.menu_s {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    html {
+        background: #f6f6ff;
+    }
+    main {
+        padding-top: 0;
+    }
+    header .header-inner {
+        justify-content: center;
+    }
+    header .logo {
+        width: 100%;
+    }header .menulist {
+        display: none;
+    }
+    .topimg {
+        text-align: center;
+    }
+    .topimg__name {
+        position: relative;
+        display: inline-block;
+        font-size: 25vw;
+        margin-top: 0;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    [data-topmsg]::before {
+        top: 18.666vw;
+    }
+    .comment {
+        position: relative;
+        margin-top: -50px;
+        top: inherit;
+        right: inherit;
+    }   
+    .comment__text {
+        font-size: 4vw;
+    }
+    .menu_s {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menubox {
+        margin-top: 20px;
+        width: 30%;
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
+    }
+    .menubox a {
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        width: 80px;
+        height: 80px;
+        line-height: 70px;
+        border-radius: 50%;
+        border: double 4px #aaa;
+        text-align: center;
+        overflow: hidden;
+        transition: .6s;
+        position: relative;
+        background: #efefef;
+    }
+}
